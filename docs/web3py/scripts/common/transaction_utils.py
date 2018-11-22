@@ -1,0 +1,17 @@
+def print_transaction(web3, transaction, optstr = None):
+    #print('transaction: ', transaction)
+    #print('type(transaction): ', type(transaction))
+    
+    print('\ntransaction {')
+    print('\thash', web3.toHex(transaction['hash']))
+    print('\tnonce', web3.toInt(transaction['nonce']))
+    print('\tblockHash', web3.toHex(transaction['blockHash']))
+    print('\tblockNumber', web3.toInt(transaction['blockNumber']))
+    print('\ttransactionIndex', web3.toHex(transaction['transactionIndex']))
+    print('\tfrom', transaction['from'])
+    print('\tto', transaction['to'])
+    print('\tvalue', transaction['value'])
+    print('\tgas', web3.toInt(transaction['gas']))
+    print('\tgasPrice', web3.toInt(transaction['gasPrice']))
+    print('\tinput', transaction['input'])
+    print('}')
